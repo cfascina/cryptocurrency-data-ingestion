@@ -43,7 +43,7 @@ class S3DataWriter(DataWriter):
         super().__init__(api, coin)
         self.temp_file = NamedTemporaryFile()
         self.client = boto3.client("s3")
-        self.key = f"mercado-bitcoin/{self.api}/coin={self.coin}/extracted-at={datetime.datetime.now().date()}/{datetime.datetime.now()}.json"
+        self.key = self.file_name
 
     def _write_row(self, row: str) -> str:
         with open(self.temp_file.name, "a") as f:
@@ -55,5 +55,5 @@ class S3DataWriter(DataWriter):
 
     def _write_at_s3(self):
         self.client.put_object(
-            Body=self.temp_file, Bucket="mercado-bitcoin", Key=self.key
+            Body=self.temp_file, Bucket="cyptocurrency-data", Key=self.key
         )

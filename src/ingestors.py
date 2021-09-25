@@ -1,8 +1,8 @@
 import datetime
 
 from abc import ABC, abstractmethod
-from src.apis import ApiDaySummary
-from src.checkpoints import CheckpointModel, DynamoCheckpoints
+from apis import ApiDaySummary
+from checkpoints import CheckpointModel, DynamoCheckpoints
 
 
 class DataIngestorAWS(ABC):

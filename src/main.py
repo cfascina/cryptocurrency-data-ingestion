@@ -2,8 +2,8 @@ import datetime
 import time
 
 from schedule import repeat, every, run_pending
-from src.ingestors import IngestorDaySummaryAWS
-from src.writers import S3DataWriter
+from ingestors import IngestorDaySummaryAWS
+from writers import S3DataWriter
 
 
 if __name__ == "__main__":
