@@ -1,0 +1,25 @@
+name: Run feature tests
+
+on:
+  push:
+    branches-ignore:
+      - master
+      - main
+      - develop
+
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@V2
+      
+      - name: Python Setup
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+      
+      - name: Install Dependencies
+        run: make ci-setup
+        
+      - name: Run Tests
+        run: make ci-tests
