@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "aws-lambda"
+name = "cryptocurrency-data-ingestion"
 version = "0.1.0"
-description = ""
+description = "Cryptocurrency data ingestion using Amazon AWS"
 authors = ["Caio <cfascina@gmail.com>"]
 
 [tool.poetry.dependencies]
@@ -10,15 +10,14 @@ requests = "^2.26.0"
 ratelimit = "^2.2.1"
 backoff = "^1.11.1"
 boto3 = "^1.18.41"
-schedule = "^1.1.0"
 pynamodb = "^5.1.0"
-pytest = "^6.2.5"
 
 [tool.poetry.dev-dependencies]
 black = "^21.9b0"
 zappa = "^0.50.0"
 flake8 = "^3.9.2"
 pre-commit = "^2.15.0"
+pytest = "^6.2.5"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
