@@ -18,7 +18,6 @@
         "debug": true,
         "environment_variables": {"STAGE": "dev"},
         "extends": "prod",
-        "manage_roles": false,
         "events": [{
             "function": "src.lambda_function.lambda_handler",
             "expression": "rate(5 minute)"
