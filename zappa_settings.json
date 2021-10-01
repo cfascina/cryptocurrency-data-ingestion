@@ -5,6 +5,7 @@
         "aws_region": "us-east-1",
         "environment_variables": {"STAGE": "prod"},
         "lambda_handler": "src.lambda_function.lambda_handler",
+        "manage_roles": false,
         "memory_size": 128,
         "project_name": "cryptocurrency-data-ingestion",
         "runtime": "python3.8",
