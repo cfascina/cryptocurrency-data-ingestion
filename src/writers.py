@@ -55,5 +55,5 @@ class S3DataWriter(DataWriter):
 
     def _write_at_s3(self):
         self.client.put_object(
-            Body=self.temp_file, Bucket="cyptocurrency-data", Key=self.key
+            Body=self.temp_file, Bucket="cryptocurrency-data-ingestion", Key=self.key
         )
