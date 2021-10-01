@@ -5,9 +5,10 @@
         "aws_region": "us-east-1",
         "environment_variables": {"STAGE": "prod"},
         "lambda_handler": "src.lambda_function.lambda_handler",
-        "manage_roles": false,
         "memory_size": 128,
         "project_name": "cryptocurrency-data-ingestion",
+        "role_arn": "arn:aws:iam::911739205087:user/deploy-guy",
+        "role_name": "ZappaRole",
         "runtime": "python3.8",
         "s3_bucket": "cryptocurrency-data-ingestion",
         "events": [{
