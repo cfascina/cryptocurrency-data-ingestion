@@ -19,7 +19,7 @@
         "environment_variables": {"STAGE": "dev"},
         "events": [{
             "function": "src.lambda_function.lambda_handler",
-            "expression": "rate(5 minute)"
+            "expression": "rate(5 minutes)"
         }]
     }
 }
